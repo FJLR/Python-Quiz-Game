@@ -64,13 +64,35 @@ def draw():
         index = index + 1
 
 def game_over():
-    pass
+    global question, time_left
+    message = "Game is over. You got %s questions correct" % str(score)
+    question = [message, "_", "_", "_", "_", 5]
+    time_left = 0
 
 def correct_answer():
-    pass
-
+    global question, score, time_left
+    score = score + 1
+    if question:
+        question = question.pop(0)
+        time_left = 30
+    else
+        print("No more questions")
+        game_over()
+ 
 def on_mouse_down(pos):
-    pass
+    index = 1
+    for box in answer_boxes:
+        if box.collidepoint(pos):
+            print("Clicked on answer " + str(index))
+
+            if index == question[5]
+               print("You got it right, superb...!")
+               correct_answer()
+            else:
+               game_over()             
+
+
+        index = index + 1
 
 def Update_time_left():
     pass
