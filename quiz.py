@@ -36,7 +36,7 @@ q1 = ["How do you terminated an statement in JS", ":", ";", "#", "}", 2]
 
 q2 = ["How do you define a Function in JS", "func", "myFunction", "console", "function", 4]
 
-q3 = ["How do you define an Array", "{}", "[a, b]", "();", "{a, b}", 2]
+q3 = ["How do you define an Array", "curly brackets", "cursive brackets", "square brackets;", "apostrophe", 3]
 
 q4 = ["What DOM means", "Demographic or Methodology", "Document of Menace", "Document Object Model", "Display of Model", 3]
 
@@ -72,10 +72,10 @@ def game_over():
 def correct_answer():
     global question, score, time_left
     score = score + 1
-    if question:
-        question = question.pop(0)
+    if questions:
+        question = questions.pop(0)
         time_left = 30
-    else
+    else:
         print("No more questions")
         game_over()
  
@@ -85,7 +85,7 @@ def on_mouse_down(pos):
         if box.collidepoint(pos):
             print("Clicked on answer " + str(index))
 
-            if index == question[5]
+            if index == question[5]:
                print("You got it right, superb...!")
                correct_answer()
             else:
@@ -94,7 +94,7 @@ def on_mouse_down(pos):
 
         index = index + 1
 
-def Update_time_left():
+def update_time_left():
     global time_left
     if time_left:
         time_left = time_left -1
@@ -102,11 +102,6 @@ def Update_time_left():
         game_over()
 
 clock.schedule_interval(update_time_left, 1.0)
-
-
-
-
-
 
 
 pgzrun.go()
