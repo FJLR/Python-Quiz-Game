@@ -40,10 +40,12 @@ q3 = ["How do you define an Array", "curly brackets", "cursive brackets", "squar
 
 q4 = ["What DOM means", "Demographic or Methodology", "Document of Menace", "Document Object Model", "Display of Model", 3]
 
-q5 = ["What is an event Listener", "button", "action", "Method", "Array", 3]
+q5 = ["What is an event Listener", "Button", "Action", "Method", "Array", 3]
+
+q6 = ["How you comment out in Python", "#", "//", "/*", "/!", 1]
 
 
-questions = [q1, q2, q3, q4, q5]
+questions = [q1, q2, q3, q4, q5, q6]
 
 question = questions.pop(0)
 
