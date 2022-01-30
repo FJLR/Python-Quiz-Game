@@ -89,13 +89,19 @@ def on_mouse_down(pos):
                print("You got it right, superb...!")
                correct_answer()
             else:
-               game_over()             
+                game_over()             
 
 
         index = index + 1
 
 def Update_time_left():
-    pass
+    global time_left
+    if time_left:
+        time_left = time_left -1
+    else:
+        game_over()
+
+clock.schedule_interval(update_time_left, 1.0)
 
 
 
